@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    min-height: 100%;
+    }
+    body, div { 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 20;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: 25%;
+        margin-top:5%;
+      }
+      .active {
+        background-color: #4CAF50;
+      }
+      li {
+        float: left;
+      }
+      
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 25px;
+        text-decoration: none;
+        border: 1px solid white ;
+      }
+      
+      /* Change the link color to #111 (black) on hover */
+      a:hover {
+        background-color: lightseagreen;
+      }
+    h1, h4 {
+    margin: 15px 0 4px;
+    font-weight: 400;
+    }
+    h4 {
+    margin: 20px 0 4px;
+    font-weight: 400;
+    }
+    span {
+    color: red;
+    }
+    .small {
+    font-size: 10px;
+    line-height: 18px;
+    }
