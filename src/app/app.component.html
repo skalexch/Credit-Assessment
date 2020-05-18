@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      .button {
+        background-color: #1c87c9;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+<h1>Credit Assessment App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul class='nav navbar-nav item'>
+    <li><a routerLink="/public-interface" routerLinkActive="active">Interface publique</a></li>
+    <li><a routerLink="/login" routerLinkActive="active">Interface banquier</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+</body>
+</html>
