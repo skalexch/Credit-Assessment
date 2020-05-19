@@ -13,15 +13,21 @@ export class BankerInterfaceComponent  {
   form: FormGroup;
     
   firstName = new FormControl("", Validators.required);
+  lastName = new FormControl("", Validators.required);
+
+
   
   constructor(fb: FormBuilder) {
       this.form = fb.group({
           "firstName": this.firstName,
-          "password":["", Validators.required]
+          "lastName": this.lastName,
+
       });
   }
   onSubmitModelBased() {
       console.log("model-based form submitted");
       console.log(this.form);
+      console.warn(this.form.value);
+
   }
 }

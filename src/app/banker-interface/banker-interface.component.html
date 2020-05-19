@@ -1,17 +1,19 @@
-<p>banker-interface works!</p>
-<section class="sample-app-content">
-    <h1>Model-based Form Example:</h1>
+<section class="banker-int">
+    <h1>Info for new client:</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmitModelBased()">
         <p>
             <label>First Name:</label>
             <input type="text" formControlName="firstName">
         </p>
         <p>
-            <label>Password:</label>
-            <input type="password" formControlName="password">
+            <label>Last Name:</label>
+            <input type="text" formControlName="lastName">
         </p>
         <p>
-            <button type="submit" [disabled]="!form.valid">Submit</button>
+            <button type="submit" [disabled]="!form.valid">Calculate credit risk</button>
         </p>
     </form>
+    <p>
+        Hi my name is! : {{ firstName.value}} {{lastName.value}}
+      </p>
 </section>

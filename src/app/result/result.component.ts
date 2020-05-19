@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-
+  risk: number = 0.8;
+  verdict: boolean = true; 
+  loading = false;
   constructor() { }
 
   ngOnInit(): void {

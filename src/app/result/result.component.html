@@ -1,1 +1,10 @@
-<p>result works!</p>
+<h5>
+    The credit that you asked for has a  {{risk*100}} % risk<br>
+</h5>
+<h5>
+Do you wish to validate this credit ?
+</h5>
+<button [disabled]="loading" class="btn btn-primary">
+    <span *ngIf="verdict" class="spinner-border spinner-border-sm mr-1"></span>
+    Validate
+</button>
