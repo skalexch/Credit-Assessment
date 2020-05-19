@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { fakeBackendProvider } from './_helpers';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,8 @@ import { ClientIdComponent } from './client-id/client-id.component';
 import { PreloadedInfoComponent } from './preloaded-info/preloaded-info.component';
 import { ResultPublicComponent } from './result-public/result-public.component';
 import { ValidationComponent } from './validation/validation.component';
+
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 @NgModule({
   declarations: [
@@ -31,9 +35,15 @@ import { ValidationComponent } from './validation/validation.component';
   imports: [
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+],  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

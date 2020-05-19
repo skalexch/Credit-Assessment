@@ -1,1 +1,5 @@
 <p>validation works!</p>
+<div *ngFor="let client of clients$ | async">
+    <h2>{{client.firstName}}</h2>
+    <p>{{client.salary}}</p>
+  </div>
