@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Credit} from 'src/app/_models'
 import { FormGroup, FormControl, Validators, FormBuilder } 
-    from '@angular/forms';
+from '@angular/forms';
 import { from } from 'rxjs';
 @Component({
   selector: 'app-banker-interface',

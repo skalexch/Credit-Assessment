@@ -66,9 +66,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "Credit-Assessment:build:production",
-              "proxyConfig": "src/proxy.conf.js"
-            }
+              "browserTarget": "Credit-Assessment:build:production"
+                          }
           }
         },
         "extract-i18n": {

@@ -15,8 +15,19 @@
         cursor: pointer;
       }
     </style>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    
+            <!--For Plugins external css-->
+            <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+    
+            <!--Theme custom css -->
+            <link rel="stylesheet" href="/src/styles2.css">
+            <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
   </head>
   <body>
+    
 <h1>Credit Assessment App</h1>
 <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
 <nav>
@@ -35,8 +46,8 @@
     <li><a routerLink="/val" routerLinkActive="active">Validation</a></li>
 
   </ul>
-</nav>
+</nav> 
+
+
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>
-</body>
-</html>

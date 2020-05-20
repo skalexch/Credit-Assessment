@@ -6,5 +6,9 @@ Do you wish to validate this credit ?
 </h5>
 <button [disabled]="loading" class="btn btn-primary">
     <span *ngIf="verdict" class="spinner-border spinner-border-sm mr-1"></span>
-    Validate
+    YES with an interest rate of {{ interest*100 }} %
+</button>
+<button [disabled]="loading" class="btn btn-primary">
+    <span *ngIf="verdict" class="spinner-border spinner-border-sm mr-1"></span>
+    NO
 </button>

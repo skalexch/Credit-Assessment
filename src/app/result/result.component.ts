@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
   risk: number = 0.8;
+  interest: number = 0.08;
   verdict: boolean = true; 
   loading = false;
   constructor() { }
