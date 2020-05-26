@@ -69,7 +69,7 @@
             <input type="number" formControlName="creditPeriod" placeholder="example: 10 (in years)">
         </p>
         <p>
-            <button type="submit" [disabled]="!form.valid">Calculate credit risk</button>
+            <button type="submit" [disabled]="!form.valid" routerLink="/resultpublic" routerLinkActive="active">Calculate credit risk</button>
         </p>
         
     </form>

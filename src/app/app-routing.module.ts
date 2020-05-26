@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'public-interface', component: PublicInterfaceComponent},
   { path: 'login', component: LoginComponent},
   { path: 'banker-interface', component: BankerInterfaceComponent},
-  { path: 'clt', component: ClienttypeComponent},
+  { path: 'clienttype', component: ClienttypeComponent},
   { path: 'id', component: ClientIdComponent},
   { path: 'prld', component: PreloadedInfoComponent},
   { path: 'resultpublic', component: ResultPublicComponent},

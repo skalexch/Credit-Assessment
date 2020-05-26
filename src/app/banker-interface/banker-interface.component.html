@@ -10,7 +10,7 @@
             <input type="text" formControlName="lastName">
         </p>
         <p>
-            <button type="submit" [disabled]="!form.valid">Calculate credit risk</button>
+            <button type="submit" [disabled]="!form.valid" routerLink="/result" routerLinkActive="active"> Calculate credit risk</button>
         </p>
     </form>
     <p>
