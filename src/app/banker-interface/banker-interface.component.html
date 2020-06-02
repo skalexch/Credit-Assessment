@@ -1,72 +1,70 @@
-<section class="banker-int">
+
+<div class="container">
     <h1>Info for new client:</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmitModelBased()">
-        <p>
+        <div class="form-group">
             <label>Client First Name:</label><br />
-            <input type="text" formControlName="firstName">
-        </p>
-        <p>
+            <input type="text" formControlName="firstName" class="form-control">
+        </div>
+        <div class="form-group">
             <label>Client Last Name:</label><br />
-            <input type="text" formControlName="lastName">
-        </p>
-        <p>
+            <input type="text" formControlName="lastName" class="form-control">
+        </div>
+        <div class="form-group"> 
             <label>Client CIN:</label><br />
-            <input type="number" formControlName="cin">
-        </p>
-        <p>
+            <input type="number" formControlName="cin" class="form-control">
+        </div>
+        <div class="form-group">
             <label for="email">Client email:</label><br />
-            <input type="email" id="email" formControlName="email" placeholder="default@example.com">
-        </p>
-        <p>
+            <input type="email" id="email" formControlName="email" placeholder="default@example.com" class="form-control">
+        </div>
+        <div class="form-group">
             <label for="situation">Client Civil Status:</label><br />
-            <select id="situation" formControlName="situation">
+            <select id="situation" formControlName="situation" class="form-control">
                 <option value="married">Married</option>
                 <option value="single">Single</option>
                 <option value="divorced">Divorced</option>
             </select>
-        </p>
-        <p>
+        </div>
+        <div class="form-group">
           <label for ="Kids"> Number of Kids:</label><br/>
-          <select id='Kids' formControlName='Kids'>
+          <select id='Kids' formControlName='Kids' class="form-control">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="+3">+3</option>
           </select>
-        </p>
-        <p>
+        </div>
+        <div class="form-group">
             <label for="birthday">Date of Birth:</label><br />
-            <input type="date" id="birthday" formControlName="birthday">
-        </p>
-        <p>
+            <input type="date" id="birthday" formControlName="birthday" class="form-control">
+        </div>
+        <div class="form-group">
             <label>Salary:</label><br />
-            <input type="number" formControlName="salary" placeholder="example: 1000 (in dinars)">
-        </p>
-        <p>
-            <label for="credit">Current Credits :</label><br>
-            <input type="radio" id="no" formControlName="oldCredit" value="No">
-            <label for="no">No</label><br>
-            <input type="radio" id="thisbank" formControlName="oldCredit" value="thisbank">
-            <label for="thisbank">Yes, from This Bank</label><br>
-            <input type="radio" id="others" formControlName="oldCredit" value="others">
-            <label for="others">Yes, from another Bank</label><br>
-        </p>
-        <p>
+            <input type="number" formControlName="salary" placeholder="example: 1000 (in dinars)" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="credit">Do you have credits :</label>
+            <select id="credit" formControlName="credit"  class="form-control" class="form-control">
+                <option value="0">No</option>
+                <option value="1">Yes, from your Bank</option>
+                <option value="2">Yes, from another Bank</option>
+            </select>
+           
+        </div>
+        <div class="form-group">
             <label>credit annuity he is paying monthly:</label><br />
-            <input type="number" formControlName="annuity" placeholder="example: 100 (in dinars)">
-        </p>
-        <p>
+            <input type="number" formControlName="annuity" placeholder="example: 100 (in dinars)" class="form-control">
+        </div>
+        <div class="form-group">
             <label>credit amount he is applying for:</label><br />
-            <input type="number" formControlName="creditAmount" placeholder="example: 10000 (in dinars)">
-        </p>
-        <p>
+            <input type="number" formControlName="creditAmount" placeholder="example: 10000 (in dinars)" class="form-control">
+        </div>
+        <div class="form-group">
             <label>credit period:</label><br />
-            <input type="number" formControlName="creditPeriod" placeholder="example: 10 (in years)">
-        </p>
-        <p>
-            <button type="submit" [disabled]="!form.valid" routerLink="/result"
-             routerLinkActive="active">Calculate credit risk</button>
-        </p>
+            <input type="number" formControlName="creditPeriod" placeholder="example: 10 (in years)" class="form-control">
+        </div>
+            <button type="submit" [disabled]="!form.valid" (click)=func() class="btn btn-primary">Calculate credit risk</button>
         
     </form>
-</section>
+</div>

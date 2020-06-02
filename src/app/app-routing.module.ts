@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'clienttype', component: ClienttypeComponent},
   { path: 'id', component: ClientIdComponent},
   { path: 'prld', component: PreloadedInfoComponent},
-  { path: 'resultpublic', component: ResultPublicComponent},
+  { path: 'result-public', component: ResultPublicComponent},
   { path: 'result', component: ResultComponent},
   { path: 'val', component: ValidationComponent},
 

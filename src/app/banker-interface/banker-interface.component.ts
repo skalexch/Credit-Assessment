@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {Credit} from 'src/app/_models'
+import { pub } from '../public-interface/pub';
+import { ScoringService } from '../public-interface/scoring.service';
 import { FormGroup, FormControl, Validators, FormBuilder } 
 from '@angular/forms';
 import { from } from 'rxjs';
@@ -12,36 +13,31 @@ import { from } from 'rxjs';
 export class BankerInterfaceComponent  {
   form: FormGroup;
     
-  firstName = new FormControl("", Validators.required);
-  lastName = new FormControl("", Validators.required);
-  cin=new FormControl("", Validators.required);
-  email=new FormControl("", Validators.required);
-  situation=new FormControl("", Validators.required);
-  kids=new FormControl("", Validators.required);
-  birthday=new FormControl("", Validators.required);
-  oldCredit=new FormControl("", Validators.required);
-  annuity=new FormControl("", Validators.required);
-  creditAmount=new FormControl("", Validators.required);
-  creditPeriod=new FormControl("", Validators.required);
+  pub: pub = new pub();
+  x: any;
+
+  constructor(fb: FormBuilder, private router:Router,private scoring:ScoringService) {
+      
+  }
 
 
   
-  constructor(fb: FormBuilder) {
-      this.form = fb.group({
-          "firstName": this.firstName,
-          "lastName": this.lastName,
-          "cin": this.cin,
-          "email": this.email,
-          "situation": this.situation,
-          "kids": this.kids,
-          "birthday": this.birthday,
-          "oldCredit": this.oldCredit,
-          "annuity": this.annuity,
-          "creditAmount": this.creditAmount,
-          "creditPeriod": this.creditPeriod
+  func(){
+    
+    this.scoring.postScore(this.pub)
+        .subscribe(
+         value => {
+           console.log(value);
+           this.x = value;
+         }       
+         , () => {
+          console.log('POST connected - now completed.');
+      
+        });
 
-      });
-  }
+    this.router.navigate(['result'] , {state:{ val_ret : this.x }} ) ; 
+    }
+  
   onSubmitModelBased() {
       console.log("model-based form submitted");
       console.log(this.form);

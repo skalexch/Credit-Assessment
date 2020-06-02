@@ -1,13 +1,13 @@
 <p>client-id works!</p>
-<div class="card">
-    <h4 class="card-header">Enter client CIN</h4>
+<div class="container">
+    <h4 class="card-header">Enter client ID</h4>
     <div class="card-body">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="form-group">
-                <label for="username">Client CIN</label>
+                <label for="username">Client ID</label>
                 <input type="text" formControlName="client-id" class="form-control" [ngClass]="{ 'is-invalid': submitted && form.errors }" />
                 <div *ngIf="submitted && form.errors" class="invalid-feedback">
-                    <div *ngIf="form.errors.required">Client CIN is required</div>
+                    <div *ngIf="form.errors.required">Client ID is required</div>
                 </div>
             </div>
             <div class="form-group">

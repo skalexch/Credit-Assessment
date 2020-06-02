@@ -17,8 +17,18 @@ import { ResultPublicComponent } from './result-public/result-public.component';
 import { ValidationComponent } from './validation/validation.component';
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
+  
+  imports: [
+    ReactiveFormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
   declarations: [
     AppComponent,
     LoginComponent,
@@ -32,12 +42,6 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
     ValidationComponent,
 
   ],
-  imports: [
-    ReactiveFormsModule,
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
@@ -46,4 +50,10 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
   bootstrap: [AppComponent]
 })
+
+
+
+
 export class AppModule { }
+
+

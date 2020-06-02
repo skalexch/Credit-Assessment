@@ -1,77 +1,75 @@
-<li><a routerLink="/a" routerLinkActive="active"></a></li>
+
 <router-outlet></router-outlet>
+<div class="container">
 
-
-<section class="client-int">
     <h1>New Credit Form</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmitModelBased()">
-        <p>
+        <div class="form-group">
             <label>First Name:</label><br />
-            <input type="text" formControlName="firstName">
-        </p>
-        <p>
+            <input type="text" formControlName="firstName" class="form-control" > 
+        </div>
+        <div class="form-group">
             <label>Last Name:</label><br />
-            <input type="text" formControlName="lastName">
-        </p>
-        <p>
+            <input type="text" formControlName="lastName" class="form-control">
+        </div>
+        <div class="form-group">
             <label>CIN:</label><br />
-            <input type="number" formControlName="cin">
-        </p>
-        <p>
+            <input type="number" formControlName="cin" class="form-control">
+        </div>
+        <div class="form-group">
             <label for="email">Enter your email:</label><br />
-            <input type="email" id="email" formControlName="email" placeholder="default@example.com">
-        </p>
-        <p>
-            <label for="situation">Choose a situation:</label><br />
-            <select id="situation" formControlName="situation">
-                <option value="married">Married</option>
-                <option value="single">Single</option>
+            <input type="email" id="email" formControlName="email" placeholder="default@example.com"  class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="situation" >Choose a situation:</label>
+            <select id="situation" formControlName="situation"  class="form-control">
+                <option value="0">Married</option>
+                <option value="1">Single</option>
             </select>
-        </p>
-        <p>
+        </div>
+        <div class="form-group">
             <label for="kids">How many kids ou have :</label>
-            <input type="radio" id="zero" formControlName="kids" value=0>
-            <label for="zero">0</label><br>
-            <input type="radio" id="one" formControlName="kids" value=1>
-            <label for="one">1</label><br>
-            <input type="radio" id="two" formControlName="kids" value=2>
-            <label for="two">2</label>
-            <input type="radio" id="three+" formControlName="kids" value=3>
-            <label for="three+">+3</label>
-        </p>
-        <p>
-            <label for="birthday">date of birth:</label><br />
-            <input type="date" id="birthday" formControlName="birthday">
-        </p>
-        <p>
-            <label>Salary:</label><br />
-            <input type="number" formControlName="salary" placeholder="example: 1000 (in dinars)">
-        </p>
-        <p>
-            <label for="credit">Do you have credits :</label><br>
-            <input type="radio" id="non" formControlName="oldCredit" value="non">
-            <label for="non">No</label><br>
-            <input type="radio" id="cheznous" formControlName="oldCredit" value="cheznous">
-            <label for="cheznous">Yes, from your Bank</label><br>
-            <input type="radio" id="others" formControlName="oldCredit" value="others">
-            <label for="others">Yes, from another Bank</label><br>
-        </p>
-        <p>
-            <label>credit annuity you're paying monthly:</label><br />
-            <input type="number" formControlName="annuity" placeholder="example: 100 (in dinars)">
-        </p>
-        <p>
-            <label>credit amount you're applying for:</label><br />
-            <input type="number" formControlName="creditAmount" placeholder="example: 10000 (in dinars)">
-        </p>
-        <p>
-            <label>credit period:</label><br />
-            <input type="number" formControlName="creditPeriod" placeholder="example: 10 (in years)">
-        </p>
-        <p>
-            <button type="submit" [disabled]="!form.valid" routerLink="/resultpublic" routerLinkActive="active">Calculate credit risk</button>
-        </p>
+            <select id="kids" formControlName="kids"  class="form-control">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">+3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="birthday">date of birth:</label>
+            <input type="date" id="birthday" formControlName="birthday" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Salary:</label>
+            <input type="number" formControlName="salary" placeholder="example: 1000 (in dinars)"  class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="credit">Do you have credits :</label>
+            <select id="credit" formControlName="credit"  class="form-control">
+                <option value="0">No</option>
+                <option value="1">Yes, from your Bank</option>
+                <option value="2">Yes, from another Bank</option>
+            </select>
+           
+        </div>
+        <div class="form-group">
+            <label>credit annuity you're paying monthly:</label>
+            <input type="number" formControlName="annuity" placeholder="example: 100 (in dinars)" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>credit amount you're applying for:</label>
+            <input type="number" formControlName="creditAmount" placeholder="example: 10000 (in dinars)"  class="form-control">
+        </div>
+        <div class="form-group">
+            <label>credit period:</label>
+            <input type="number" formControlName="creditPeriod" placeholder="example: 10 (in years)"  class="form-control">
+        </div>
         
-    </form>
-</section>
+   
+        <button type="submit" [disabled]="!form.valid" (click)=func() class="btn btn-primary">Calculate credit risk</button>
+        
 
+    </form>
+
+</div>

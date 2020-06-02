@@ -6,11 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result-public.component.css']
 })
 export class ResultPublicComponent implements OnInit {
-  risk: number = 0.8;
+  risk: number = window.history.state.val_ret;
+  interest: number = 0.08 ;
+
   verdict: boolean = true; 
-  constructor() { }
+  loading = false;
+  constructor() { 
+    
+    
+  }
 
   ngOnInit(): void {
+
+
   }
 
 }

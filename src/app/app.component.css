@@ -1,8 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
-html, body {
-    min-height: 100%;
+/* 
+    body{
+      min-height: 100%;
     }
-    body, div, form, input, select { 
+
+    html {
+    min-height: 100%;
+    
+    }
+    div{ 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+    
+    form{ 
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        line-height: 22px;
+        }
+    
+    input{ 
+          padding: 0;
+          margin: 100;
+          outline: none;
+          font-family: Roboto, Arial, sans-serif;
+          font-size: 14px;
+          color: #666;
+          line-height: 22px;
+          }
+    select { 
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+            line-height: 22px;
+    }
+    body { 
     padding: 0;
     margin: 0;
     outline: none;
@@ -33,7 +76,7 @@ html, body {
         text-decoration: none;
       }
       
-      /* Change the link color to #111 (black) on hover */
+      
       li a:hover {
         background-color: #111;
       }
@@ -181,4 +224,4 @@ html, body {
     th, td {
     word-break: keep-all;
     }
-    }
+    } */

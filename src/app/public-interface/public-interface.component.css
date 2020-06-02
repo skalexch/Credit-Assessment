@@ -10,8 +10,8 @@ section{
 form{
     background-color: white;
     background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 40px;
+    background-repeat:no-repeat;
+    padding-left: 0px;
 }
 input{
 width:70%;
