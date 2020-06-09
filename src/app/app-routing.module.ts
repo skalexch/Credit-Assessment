@@ -12,6 +12,7 @@ import { ResultPublicComponent } from './result-public/result-public.component';
 import { ResultComponent } from './result/result.component';
 import { ValidationComponent } from './validation/validation.component';
 import { PreloadedInfoComponent } from './preloaded-info/preloaded-info.component';
+import { RendezvousComponent } from './rendezvous/rendezvous.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,7 @@ const routes: Routes = [
   { path: 'result-public', component: ResultPublicComponent},
   { path: 'result', component: ResultComponent},
   { path: 'val', component: ValidationComponent},
-
+  { path: 'rdv', component: RendezvousComponent},
 
 
 ];

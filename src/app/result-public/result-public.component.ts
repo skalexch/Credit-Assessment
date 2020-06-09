@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultPublicComponent implements OnInit {
   risk: number = window.history.state.val_ret;
-  interest: number = 0.08 ;
+  interest: number = window.history.state.val_ret ;
 
   verdict: boolean = true; 
   loading = false;

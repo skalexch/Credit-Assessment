@@ -1,4 +1,16 @@
-<h4 class="w3-container w3-center">
+<div class="container">
+    <h1 class="card-header">Credit risk simulation result</h1>
+    <div><h4 class="w3-container w3-center">
     The credit that you asked for has a  {{risk*100}} % risk<br>
-<br>
-</h4>
+    </h4></div>
+    <div class="form-group">
+        <label>Reserve rendez-vous</label><br />
+        <input type="date" id="start" name="trip-start" formControlName="rendezvous"
+        value="2018-07-22"
+        min="2020-09-06" max="2020-12-31" class="form-control">
+    </div>
+    <button [disabled]="loading" class="btn btn-primary" routerLink="/rdv" routerLinkActive="active">
+    <span *ngIf="verdict" class="spinner-border spinner-border-sm mr-1" ></span>
+    Reserve rendez-vous
+    </button>
+</div>

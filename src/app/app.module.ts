@@ -18,6 +18,7 @@ import { ValidationComponent } from './validation/validation.component';
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { FormsModule } from '@angular/forms';
+import { RendezvousComponent } from './rendezvous/rendezvous.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     PreloadedInfoComponent,
     ResultPublicComponent,
     ValidationComponent,
+    RendezvousComponent,
 
   ],
   providers: [

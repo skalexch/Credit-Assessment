@@ -1,7 +1,7 @@
 
 <div class="container">
-    <h1>Info for new client:</h1>
-    <form [formGroup]="form" (ngSubmit)="onSubmitModelBased()">
+    <h1 class="card-header">New Client Form</h1>
+        <form [formGroup]="form" (ngSubmit)="onSubmitModelBased()">
         <div class="form-group">
             <label>Client First Name:</label><br />
             <input type="text" formControlName="firstName" class="form-control">
